@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using ListViewSelectionMode = Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode;
 
 namespace XamarinFontIcons
 {
@@ -11,7 +12,10 @@ namespace XamarinFontIcons
     {
         public MainPage()
         {
+            BindingContext = new MainPageViewModel();
+
             InitializeComponent();
         }
+
     }
 }

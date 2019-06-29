@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
+using ObjCRuntime;
 using UIKit;
 
 namespace XamarinFontIcons.iOS
@@ -21,6 +22,11 @@ namespace XamarinFontIcons.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            /*
+            var font = UIFont.FontNamesForFamilyName("Font Awesome 5 Free");
+            if (font == null || font.Length == 0) throw new RuntimeException("Font Not Found!");
+            System.Diagnostics.Debug.WriteLine(string.Join(", ", font));
+            */
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
