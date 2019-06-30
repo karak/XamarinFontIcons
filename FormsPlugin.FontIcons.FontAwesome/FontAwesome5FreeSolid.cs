@@ -1,7 +1,7 @@
 using System;
 using Xamarin.Forms;
 
-namespace XamarinFontIcons
+namespace FormsPlugin.FontIcons
 {
 	/// <summary>
 	/// Icon utility for
@@ -32,6 +32,9 @@ namespace XamarinFontIcons
 		private const string AndroidFontName = "Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free-Solid";
 		private const string IOSFontName = "FontAwesome5Free-Solid";
 
+		/// <summary>
+		/// Code points of FontAwesome 5.9.0
+		/// </summary>
 		public static class IconNames
 		{
 			public const string Space = "\u0020";

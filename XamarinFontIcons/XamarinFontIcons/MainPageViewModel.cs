@@ -1,3 +1,5 @@
+using FormsPlugin.FontIcons;
+
 namespace XamarinFontIcons
 {
     internal sealed class MainPageViewModel

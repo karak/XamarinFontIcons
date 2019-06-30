@@ -1,6 +1,6 @@
 using Xamarin.Forms;
 
-namespace XamarinFontIcons
+namespace FormsPlugin.FontIcons
 {
     public class IconLabel : Label
     {

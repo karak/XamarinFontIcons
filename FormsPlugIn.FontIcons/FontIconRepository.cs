@@ -1,17 +1,21 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace XamarinFontIcons
+namespace FormsPlugin.FontIcons
 {
     /// <summary>
     /// Repository to search for all font icons
     /// </summary>
     internal static class FontIconRepository
     {
-        private static class KnownPrefixes
+        
+        private static readonly Dictionary<string, FontModule> FontModules = new Dictionary<string, FontModule>();
+
+        public static void Add(string key, string fontFamily, Type iconNamesType)
         {
-            public const string FontAwesome5FreeSolid = "fas";
+            FontModules.Add(key, new FontModule(fontFamily, iconNamesType));
         }
 
         private const string PrefixSeparator ="-";
@@ -25,24 +29,21 @@ namespace XamarinFontIcons
         /// <exception cref="ArgumentException"></exception>
         public static (string fontFamily, string code) Find(string icon)
         {
-            var pos = icon.IndexOf(PrefixSeparator);
+            var pos = icon.IndexOf(PrefixSeparator, StringComparison.Ordinal);
             
             if (pos < 0) throw new ArgumentOutOfRangeException(nameof (icon));
             var prefix = icon.Substring(0, pos);
             var symbol = icon.Substring(pos + 1);
-            
-            switch (prefix)
-            {
-                case KnownPrefixes.FontAwesome5FreeSolid:
-                    var fontFamily = FontAwesome5FreeSolid.FontFamily;
-                    var iconNamesType = typeof(FontAwesome5FreeSolid.IconNames);
-                    var code = GetStaticField(iconNamesType, ToCamelCase(symbol));
-                    if (code == null) throw new ArgumentException(nameof (icon), $"{symbol} is unknown symbol for any icon");
 
-                    return (fontFamily, code);
-                default:
-                    throw new ArgumentException(nameof(icon), $"{prefix} is unknown prefix for any icon");
-            }
+            if (!FontModules.TryGetValue(prefix, out var font))
+                throw new ArgumentException(nameof(icon), $"{prefix} is unknown prefix for any icon");
+            var fontFamily = font.FontFamily;
+            var iconNamesType = font.IconNamesType;
+
+            var code = GetStaticField(iconNamesType, ToCamelCase(symbol));
+            if (code == null) throw new ArgumentException(nameof (icon), $"{symbol} is unknown symbol for any icon");
+
+            return (fontFamily, code);
         }
 
         /// <summary>

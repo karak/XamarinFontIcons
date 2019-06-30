@@ -10,6 +10,8 @@ namespace XamarinFontIcons
     {
         public App()
         {
+            FormsPlugin.FontIcons.FontAwesome.Init();
+
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());

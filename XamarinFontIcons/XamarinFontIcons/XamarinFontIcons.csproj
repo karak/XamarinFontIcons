@@ -12,4 +12,8 @@
     <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="4.0.0.540366" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\FormsPlugin.FontIcons.FontAwesome\FormsPlugin.FontIcons.FontAwesome.csproj" />
+      <ProjectReference Include="..\..\FormsPlugIn.FontIcons\FormsPlugIn.FontIcons.csproj" />
+    </ItemGroup>
 </Project>
