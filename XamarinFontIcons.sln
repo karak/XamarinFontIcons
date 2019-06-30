@@ -1,10 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFontIcons", "XamarinFontIcons\XamarinFontIcons\XamarinFontIcons.csproj", "{ED4DAA9E-7D49-4AE2-931D-4EEB2DDC60D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFontIcons.Android", "XamarinFontIcons\XamarinFontIcons.Android\XamarinFontIcons.Android.csproj", "{AC422E69-9A45-4C2E-B512-1FE0B3BA53B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFontIcons.iOS", "XamarinFontIcons\XamarinFontIcons.iOS\XamarinFontIcons.iOS.csproj", "{FD792850-9E3C-44EE-A3DB-460BBEA7499C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsPlugIn.FontIcons", "FormsPlugIn.FontIcons\FormsPlugIn.FontIcons.csproj", "{3BCD13FD-F164-4635-87E1-5966CBC13057}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,5 +85,21 @@ Global
 		{FD792850-9E3C-44EE-A3DB-460BBEA7499C}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{FD792850-9E3C-44EE-A3DB-460BBEA7499C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{FD792850-9E3C-44EE-A3DB-460BBEA7499C}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Release|iPhone.Build.0 = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{3BCD13FD-F164-4635-87E1-5966CBC13057}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
